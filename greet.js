@@ -17,10 +17,13 @@ function randomGreetMessageGenerator() {
         'Salaam'
     ];
     
-    for (let i = 0; i<10; i++){
+    let set = new Set();
+
+    for (let i = 0; i < 10; i++){
         const randomIndex = Math.floor(Math.random() * greetMessages.length);
-        console.log(greetMessages[randomIndex]);
+        set.add(greetMessages[randomIndex]);
     }
+    console.log(Array.from(set));
 }
 
 randomGreetMessageGenerator();

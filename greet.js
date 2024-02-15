@@ -27,3 +27,28 @@ function randomGreetMessageGenerator() {
 }
 
 randomGreetMessageGenerator();
+
+
+function randomGreetMessageGenerator2() {
+    const greetMessages = [
+        'Hello',
+        'Hi',
+        'Hey',
+        'Howdy',
+        'Hola',
+        'Bonjour',
+        'Ciao',
+        'Guten Tag',
+        'Namaste',
+        'Salaam'
+    ];
+    
+    let set = new Set();
+
+    for (let i = 0; i < 10; i++){
+        const randomIndex = Math.floor(Math.random() * greetMessages.length);
+        set.add(greetMessages[randomIndex] + ' ' + (set.size + 1));
+    }
+    console.log(Array.from(set));
+}
+randomGreetMessageGenerator2();
